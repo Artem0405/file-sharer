@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервис обмена файлами</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+    <h1>Загрузить файл</h1>
+    <p class="subtitle">Выберите файл (до 10 МБ: jpg, png, pdf, zip)</p>
+
+    <form id="uploadForm">
+        <div class="file-input-wrapper">
+            <input type="file" id="fileInput" name="file" required>
+            <label for="fileInput" class="file-input-label">Выберите файл...</label>
+        </div>
+        <button type="submit" id="submitButton">Загрузить</button>
+    </form>
+
+    <!-- Секция для отображения статуса загрузки -->
+    <div id="statusContainer" class="status-container hidden">
+        <div class="progress-bar-container">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <p id="statusText"></p>
+    </div>
+
+    <!-- Секция для отображения результата -->
+    <div id="resultContainer" class="result-container hidden">
+        <p>✅ Файл успешно загружен!</p>
+        <p>Ссылка для скачивания:</p>
+        <div class="download-link-wrapper">
+            <input type="text" id="downloadLink" readonly>
+            <button id="copyButton">Копировать</button>
+        </div>
+    </div>
+</main>
+
+<!-- Подключаем наш JavaScript-файл в самом конце -->
+<script src="main.js"></script>
+</body>
+</html>
