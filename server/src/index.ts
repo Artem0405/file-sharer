@@ -6,6 +6,7 @@ import { config } from './core/config';
 import { logger } from './core/logger';
 import { setupDatabase } from './core/database';
 import { filesRouter } from './api/files.controller';
+import multer from 'multer';
 
 const app = express();
 
